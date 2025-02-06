@@ -1,0 +1,18 @@
+<app-animal-filter (filterChange)="onFilterChange($event)"></app-animal-filter>
+
+<app-animal-list
+  [data]="dataSource"
+  [displayedColumns]="displayedColumns"
+  (sortChange)="onSortChange($event)"
+  [filter]="(filter$ | async)!"
+>
+</app-animal-list>
+
+<app-animal-paging
+  [totalRecords]="(total$ | async) ?? 0"
+  [pageSize]="(pageSize$ | async) ?? 5"
+  [pageIndex]="(pageIndex$ | async) ?? 0"
+  (pageChange)="onPageChange($event)"
+  [filter]="(filter$ | async)!"
+  [sort]="(sort$ | async)!"
+></app-animal-paging>

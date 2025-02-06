@@ -1,0 +1,16 @@
+.mat-mdc-table,
+.mat-mdc-table tbody {
+  background-color: #fff !important;
+}
+.mat-mdc-row {
+  color: black !important;
+}
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.mat-mdc-header-cell {
+  background-color: #29538a !important;
+}

@@ -1,0 +1,62 @@
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 16px;
+}
+
+.mat-card {
+  max-width: 300px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.mat-mdc-card-outlined {
+  background-color: var(
+    --mdc-outlined-card-container-color,
+    #29538a
+  ) !important;
+}
+
+.mat-mdc-button:not(:disabled) {
+  color: var(--mdc-text-button-label-text-color, #000000) !important;
+}
+
+.mat-mdc-card-subtitle {
+  color: var(--mat-card-subtitle-text-color, #fff) !important;
+}
+
+.selected {
+  background-color: #e0f7fa !important;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.centered-div {
+  width: 300px;
+}
+
+#putinImage {
+  display: none;
+}
+
+.centered-div img {
+  height: auto;
+  cursor: pointer;
+  transition:
+    transform 2s ease-in-out,
+    opacity 2s ease-in-out;
+  position: absolute;
+}

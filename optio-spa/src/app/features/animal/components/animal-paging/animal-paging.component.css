@@ -1,0 +1,6 @@
+.mat-mdc-paginator {
+  background-color: var(
+    --mat-paginator-container-background-color,
+    #29538a
+  ) !important;
+}

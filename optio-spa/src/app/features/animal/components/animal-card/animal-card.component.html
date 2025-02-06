@@ -1,0 +1,48 @@
+<div class="card-container">
+  <mat-card
+    class="mat-card"
+    appearance="outlined"
+    *ngFor="let item of animals"
+    [ngClass]="{ selected: isSelected(item._id) }"
+    (click)="toggleSelection(item._id, item)"
+  >
+    <mat-card-header>
+      <mat-card-title>{{ item.name }}</mat-card-title>
+      <mat-card-subtitle>{{ item.type }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ item.imageUrl }}" alt="{{ item.name }}" />
+    <mat-card-content>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="onButtonClick(item._id)">Feed Animal</button>
+      <div
+        matBadge="{{ item.creditCount }}"
+        matBadgeSize="large"
+        class="demo-section"
+      ></div>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="container" *ngIf="pigStatusForselectedAnimal">
+  <div class="centered-div">
+    <img
+      id="pigImage"
+      src="{{ pigStatusForselectedAnimal.imageUrl }}"
+      alt="{{ pigStatusForselectedAnimal.name }}"
+      (click)="toggleImages()"
+    />
+    <img
+      id="putinImage"
+      src="https://kaonashibucket.s3.us-east-1.amazonaws.com/Optio/Pig+Statuses/Putin.jpg"
+      alt="Putin Image"
+      (click)="toggleImages()"
+    />
+  </div>
+</div>

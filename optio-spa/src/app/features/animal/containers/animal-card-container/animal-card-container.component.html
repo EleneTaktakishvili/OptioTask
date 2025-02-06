@@ -1,0 +1,10 @@
+<div *ngIf="loading$ | async; else itemList">
+  <p>Loading...</p>
+</div>
+
+<ng-template #itemList>
+  <app-animal-card
+    [animals]="(animals$ | async)!"
+    (feedAnimal)="feedAnimal($event)"
+  ></app-animal-card>
+</ng-template>
